@@ -33,9 +33,7 @@ def main():
 
     if not os.path.isdir(REPO):
         run(["git", "clone", "--depth", "1",
-             "https://github.com/gosom/google-maps-scraper.git", REPO])
-
-    run(["unzip", "-o", "/content/gmaps_patch.zip", "-d", REPO])
+             "https://github.com/Lucilleknoll1/haji-don-google-maps-scraper.git", REPO])
 
     go = ensure_go()
     env = os.environ.copy()

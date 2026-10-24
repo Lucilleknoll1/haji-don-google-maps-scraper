@@ -11,6 +11,15 @@ This build adds business status and ownership signals for local-business outreac
 
 Validation snapshot (2026-10): the permanently-closed label matched the Google Maps UI in 10/10 sampled listings; `claim_state=unknown` behaved as a likely-unclaimed bucket in 10/10 sampled listings. `temporarily_closed` is marker-based and still needs a live fixture. Reproducible scripts are in `colab/`.
 
+### Colab quick start
+
+```bash
+!git clone https://github.com/Lucilleknoll1/haji-don-google-maps-scraper.git /content/gmaps
+!python /content/gmaps/colab/colab_test.py
+```
+
+`colab_test.py` installs Go if needed and runs the test suite. For a runnable binary, follow with `colab/colab_build.py`; then use `colab/run_one_city.py` or the CLI directly.
+
 Original project: **Google Maps Scraper** (below).
 
 ---

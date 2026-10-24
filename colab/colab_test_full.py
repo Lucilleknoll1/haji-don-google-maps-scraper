@@ -1,7 +1,12 @@
 import os
 import subprocess
 
-subprocess.run(["unzip", "-o", "/content/gmaps_patch.zip", "-d", "/content/gmaps"], check=True)
+if not os.path.isdir("/content/gmaps"):
+    subprocess.run(
+        ["git", "clone", "--depth", "1",
+         "https://github.com/Lucilleknoll1/haji-don-google-maps-scraper.git", "/content/gmaps"],
+        check=True,
+    )
 
 env = os.environ.copy()
 env["PATH"] = "/usr/local/go/bin:" + env["PATH"]
