@@ -11,6 +11,8 @@ This build adds business status and ownership signals for local-business outreac
 
 Validation snapshot (2026-10): the permanently-closed label matched the Google Maps UI in 10/10 sampled listings; `claim_state=unknown` behaved as a likely-unclaimed bucket in 10/10 sampled listings. `temporarily_closed` is marker-based and still needs a live fixture. Reproducible scripts are in `colab/`.
 
+Colab free-CPU benchmark (3-query Yonkers scrape, 48 listings, two rounds): `-c 2` averaged ~98.5s; `-c 3` averaged ~105.1s. `-c 3` gave no speedup on the 2-vCPU runtime; use `-c 2`.
+
 ### Colab quick start
 
 ```bash
