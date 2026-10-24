@@ -1,0 +1,16 @@
+cache/
+vendor
+bin
+webdata/
+examples/examples-api/map-outputs
+examples/examples-api/**/__pycache__/
+examples/examples-api/**/*.py[cod]
+gmaps-output
+
+# local validation artifacts / scraped business data
+colab/*.json
+colab/*.jsonl
+colab/*.csv
+colab/*.log
+local/test_ssh_key
+local/test_ssh_key.pub
